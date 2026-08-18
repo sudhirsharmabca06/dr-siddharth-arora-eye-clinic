@@ -1,0 +1,59 @@
+---
+const reviews = [
+  {
+    name: 'Rajesh Sharma',
+    location: 'Bharatpur',
+    text: 'Dr Arora is an excellent doctor. He diagnosed my cataract early and guided me through the entire treatment process with patience. Highly recommended!',
+    rating: 5,
+  },
+  {
+    name: 'Sunita Devi',
+    location: 'Kumher',
+    text: 'Very professional and caring. The clinic is clean and well-equipped. My eye infection was treated effectively within a few days. Thank you, Doctor!',
+    rating: 5,
+  },
+  {
+    name: 'Amit Kumar',
+    location: 'Bharatpur',
+    text: 'Took my father for a glaucoma check-up. Dr Arora explained everything clearly and the staff was very cooperative. Best eye clinic in the city.',
+    rating: 5,
+  },
+];
+---
+
+<section class="section-padding bg-white">
+  <div class="container-custom mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+      <span class="text-primary font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-heading mt-2 mb-4">
+        What Our Patients Say
+      </h2>
+      <p class="text-body text-lg">
+        Real stories from real patients who trusted us with their vision.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {reviews.map(review => (
+        <div class="bg-surface rounded-xl p-6 md:p-8 border border-gray-100 hover:shadow-lg transition-shadow">
+          <!-- Stars -->
+          <div class="flex gap-1 mb-4">
+            {Array.from({ length: review.rating }).map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#D4A843" stroke="#D4A843" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            ))}
+          </div>
+          <p class="text-body italic mb-6 leading-relaxed">"{review.text}"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm">
+              {review.name.charAt(0)}
+            </div>
+            <div>
+              <p class="font-semibold text-heading text-sm">{review.name}</p>
+              <p class="text-xs text-body">{review.location}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

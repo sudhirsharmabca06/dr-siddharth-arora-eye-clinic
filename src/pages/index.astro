@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Stats from '../components/Stats.astro';
+import About from '../components/About.astro';
+import Services from '../components/Services.astro';
+import WhyChooseUs from '../components/WhyChooseUs.astro';
+import Gallery from '../components/Gallery.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import Chatbot from '../components/Chatbot.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Dr Siddharth Arora Eye Clinic | Eye Specialist in Bharatpur, Rajasthan"
+  description="Dr Siddharth Arora Eye Clinic offers comprehensive eye care services in Bharatpur, Rajasthan. Expert ophthalmologist providing cataract, glaucoma, LASIK, and pediatric eye care."
+>
+  <Navbar />
+  <main>
+    <Hero />
+    <Stats />
+    <About />
+    <Services />
+    <WhyChooseUs />
+    <Gallery />
+    <Testimonials />
+    <FAQ />
+    <Contact />
+  </main>
+  <Footer />
+  <Chatbot />
+</Layout>

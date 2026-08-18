@@ -1,0 +1,58 @@
+---
+const faqs = [
+  {
+    question: 'How often should I get an eye examination?',
+    answer: 'Adults should have a comprehensive eye exam every 1-2 years. If you are over 60, have diabetes, or a family history of eye disease, annual exams are recommended. Children should have their first eye exam at 6 months, then at age 3, and before starting school.',
+  },
+  {
+    question: 'What is cataract surgery and is it safe?',
+    answer: 'Cataract surgery is a procedure to remove the cloudy natural lens of the eye and replace it with an artificial intraocular lens (IOL). It is one of the safest and most commonly performed surgeries worldwide, with a high success rate and quick recovery time.',
+  },
+  {
+    question: 'Do you treat children\'s eye problems?',
+    answer: 'Yes, we provide specialized pediatric eye care including vision screening, squint (strabismus) evaluation, lazy eye (amblyopia) treatment, and prescription glasses for children. Early detection in childhood is crucial for lifelong healthy vision.',
+  },
+  {
+    question: 'What are your clinic timings?',
+    answer: 'Our clinic is open in the morning from 8:00 AM to 1:00 PM, Monday through Saturday. We recommend calling ahead to schedule an appointment to minimize waiting time.',
+  },
+  {
+    question: 'Do I need a referral to visit the clinic?',
+    answer: 'No referral is needed. You can directly call us at 94131 33943 or walk in during clinic hours. However, appointments are recommended to ensure you receive dedicated time with the doctor.',
+  },
+  {
+    question: 'What should I bring for my first visit?',
+    answer: 'Please bring any previous eye prescriptions, medical records, a list of current medications, and your ID proof. If you wear glasses or contact lenses, bring them along as well.',
+  },
+];
+---
+
+<section class="section-padding bg-surface">
+  <div class="container-custom mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+      <span class="text-primary font-semibold text-sm uppercase tracking-wider">FAQ</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-heading mt-2 mb-4">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-body text-lg">
+        Find answers to common questions about our services and eye care.
+      </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-4">
+      {faqs.map((faq, index) => (
+        <details class="group bg-white rounded-xl border border-gray-100 overflow-hidden open:shadow-md transition-shadow">
+          <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none hover:bg-gray-50 transition-colors">
+            <span class="font-semibold text-heading pr-4">{faq.question}</span>
+            <span class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center group-open:bg-primary group-open:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-open:rotate-180 transition-transform"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="px-5 md:px-6 pb-5 md:pb-6 text-body leading-relaxed">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

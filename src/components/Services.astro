@@ -1,0 +1,74 @@
+---
+const servicesList = [
+  {
+    title: 'Comprehensive Eye Exams',
+    description: 'Thorough eye check-ups using advanced diagnostic equipment to assess vision and detect early signs of eye diseases.',
+    icon: '<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+  },
+  {
+    title: 'Cataract Evaluation',
+    description: 'Expert diagnosis and surgical planning for cataract removal with the latest intraocular lens options.',
+    icon: '<circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20Z"/><circle cx="12" cy="12" r="4"/>',
+  },
+  {
+    title: 'Glaucoma Screening',
+    description: 'Early detection and management of glaucoma to prevent vision loss through regular monitoring and treatment.',
+    icon: '<path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20Z"/><path d="M12 6v6l4 2"/>',
+  },
+  {
+    title: 'Contact Lens Fitting',
+    description: 'Professional fitting of contact lenses including soft, toric, and multifocal options tailored to your needs.',
+    icon: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M2 12h4"/><path d="M18 12h4"/>',
+  },
+  {
+    title: 'Pediatric Eye Care',
+    description: 'Gentle and specialized eye care for children including vision screening, squint evaluation, and amblyopia treatment.',
+    icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  },
+  {
+    title: 'Diabetic Eye Care',
+    description: 'Specialized retina examinations for diabetic patients to detect and manage diabetic retinopathy early.',
+    icon: '<path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20Z"/><path d="M12 6v6l3 3"/>',
+  },
+  {
+    title: 'LASIK Consultation',
+    description: 'Pre-operative evaluation and counseling for LASIK and other refractive surgeries to reduce dependency on glasses.',
+    icon: '<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/>',
+  },
+  {
+    title: 'Eye Infection Treatment',
+    description: 'Prompt diagnosis and treatment of eye infections, allergies, and inflammations to ensure quick recovery.',
+    icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>',
+  },
+];
+---
+
+<section id="services" class="section-padding bg-surface">
+  <div class="container-custom mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+      <span class="text-primary font-semibold text-sm uppercase tracking-wider">Our Services</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-heading mt-2 mb-4">
+        Comprehensive Eye Care Services
+      </h2>
+      <p class="text-body text-lg">
+        We offer a full spectrum of eye care services to protect and enhance your vision at every stage of life.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {servicesList.map(service => (
+        <div class="group bg-white rounded-xl p-6 border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary group-hover:text-white transition-colors">
+              <Fragment set:html={service.icon} />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-heading mb-2">{service.title}</h3>
+          <p class="text-sm text-body leading-relaxed">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

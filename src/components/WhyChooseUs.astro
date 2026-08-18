@@ -1,0 +1,52 @@
+---
+const reasons = [
+  {
+    title: 'Experienced Doctor',
+    description: 'Dr Siddharth Arora brings years of specialized training and clinical experience in ophthalmology.',
+    icon: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+  },
+  {
+    title: 'Modern Equipment',
+    description: 'Our clinic is equipped with the latest diagnostic and treatment technology for accurate results.',
+    icon: '<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>',
+  },
+  {
+    title: 'Personalized Care',
+    description: 'Every patient receives individualized attention and a treatment plan tailored to their specific needs.',
+    icon: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+  },
+  {
+    title: 'Affordable Treatment',
+    description: 'Quality eye care should be accessible. We offer transparent pricing and value-for-money services.',
+    icon: '<circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/>',
+  },
+];
+---
+
+<section class="section-padding bg-white">
+  <div class="container-custom mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+      <span class="text-primary font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-heading mt-2 mb-4">
+        Your Vision, Our Commitment
+      </h2>
+      <p class="text-body text-lg">
+        We combine expertise, technology, and compassion to deliver the best possible eye care experience.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {reasons.map((reason, index) => (
+        <div class="text-center group">
+          <div class="w-16 h-16 mx-auto mb-5 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary group-hover:text-white transition-colors">
+              <Fragment set:html={reason.icon} />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-heading mb-2">{reason.title}</h3>
+          <p class="text-body text-sm leading-relaxed">{reason.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #4A5568;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #1A1A2E;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-lg transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-semibold rounded-lg transition-all duration-300 hover:bg-yellow-600 hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .section-padding {
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;
+  }
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

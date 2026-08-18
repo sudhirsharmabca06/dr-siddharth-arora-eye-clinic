@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://drsiddhartharora.com/sitemap-index.xml
