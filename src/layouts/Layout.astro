@@ -8,6 +8,22 @@ const {
   title = "Dr Siddharth Arora Eye Clinic | Eye Specialist in Bharatpur, Rajasthan",
   description = "Dr Siddharth Arora Eye Clinic offers comprehensive eye care services in Bharatpur, Rajasthan. Expert ophthalmologist providing cataract, glaucoma, LASIK, and pediatric eye care."
 } = Astro.props;
+
+const clinicSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalClinic',
+  name: 'Dr Siddharth Arora Eye Clinic',
+  url: 'https://draroraeyecare.com/',
+  telephone: '+91-95874-56565',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '169, Krishna Nagar',
+    addressLocality: 'Bharatpur',
+    addressRegion: 'Rajasthan',
+    postalCode: '321001',
+    addressCountry: 'IN',
+  },
+};
 ---
 
 <!DOCTYPE html>
@@ -19,6 +35,8 @@ const {
   <meta name="keywords" content="eye doctor, ophthalmologist, eye clinic, Bharatpur, Rajasthan, cataract, glaucoma, LASIK, eye exam, Dr Siddharth Arora" />
   <meta name="author" content="Dr Siddharth Arora Eye Clinic" />
   <meta name="theme-color" content="#0D7377" />
+  <link rel="canonical" href="https://draroraeyecare.com/" />
+  <script type="application/ld+json" set:html={JSON.stringify(clinicSchema)}></script>
 
   <!-- Open Graph -->
   <meta property="og:title" content={title} />
